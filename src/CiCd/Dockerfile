@@ -1,8 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
-RUN apt-get update \
-	&& apt-get install -y curl \
-	&& rm -rf /var/lib/apt/Lists/*
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/Lists/*
 
 WORKDIR /app
 EXPOSE 8001
